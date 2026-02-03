@@ -1,5 +1,5 @@
 import argparse
-from zen_garden.runner import run
+from zen_garden.core.runner import run
 import os
 
 # ---------------------------------------------------------------------------

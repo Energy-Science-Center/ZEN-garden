@@ -15,7 +15,7 @@ import psutil
 import time
 from linopy.expressions import LinearExpression
 from pathlib import Path
-from zen_garden.preprocess.extract_input_data import DataInput
+from zen_garden.core.preprocess.extract_input_data import DataInput
 
 class Element:
     """

@@ -13,9 +13,9 @@ import time
 from pint import UnitRegistry
 from pint.util import column_echelon_form
 from pathlib import Path
-from zen_garden.model.technology.technology import Technology
-from zen_garden.model.carrier.carrier import Carrier
-from zen_garden.utils import get_label_position
+from zen_garden.core.model.technology.technology import Technology
+from zen_garden.core.model.carrier.carrier import Carrier
+from zen_garden.core.utils import get_label_position
 
 
 class UnitHandling:

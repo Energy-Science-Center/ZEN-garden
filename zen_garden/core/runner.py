@@ -8,9 +8,9 @@ import logging
 import os
 import importlib
 from .optimization_setup import OptimizationSetup
-from .postprocess.postprocess import Postprocess
+from zen_garden.core.postprocess.postprocess import Postprocess
 from .utils import setup_logger, InputDataChecks, StringUtils, ScenarioUtils
-import zen_garden.default_config as default_config
+import zen_garden.core.default_config as default_config
 import json
 import warnings
 

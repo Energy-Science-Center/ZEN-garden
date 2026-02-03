@@ -16,7 +16,7 @@ import xarray as xr
 import shutil
 from copy import deepcopy
 from pathlib import Path
-from zen_garden.default_config import Subscriptable
+from zen_garden.core.default_config import Subscriptable
 import requests
 from importlib.metadata import metadata
 import zipfile

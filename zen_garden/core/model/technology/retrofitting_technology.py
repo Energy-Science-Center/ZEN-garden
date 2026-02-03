@@ -6,7 +6,7 @@ constraints of the retrofitting technologies.
 import itertools
 import pandas as pd
 
-from zen_garden.utils import align_like
+from zen_garden.core.utils import align_like
 from .conversion_technology import ConversionTechnology
 from ..element import GenericRule
 

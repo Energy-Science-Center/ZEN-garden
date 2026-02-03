@@ -14,8 +14,8 @@ import logging
 
 from typing import Optional, Any,Literal
 from enum import Enum
-from zen_garden.default_config import Analysis, System, Solver
-from zen_garden.utils import slice_df_by_index
+from zen_garden.core.default_config import Analysis, System, Solver
+from zen_garden.core.utils import slice_df_by_index
 from .cache import ConditionalCache
 
 class ComponentType(Enum):

@@ -10,7 +10,7 @@ import pandas as pd
 import xarray as xr
 import linopy as lp
 from linopy.expressions import LinearExpression
-from zen_garden.utils import align_like
+from zen_garden.core.utils import align_like
 from .technology import Technology
 from ..element import GenericRule
 import warnings

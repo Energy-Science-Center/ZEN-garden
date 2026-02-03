@@ -1,8 +1,8 @@
 """
 File that contains functions to compare the results of two or more models.
 """
-from zen_garden.postprocess.results import Results
-from zen_garden.postprocess.results.solution_loader import ComponentType
+from zen_garden.core.postprocess.results import Results
+from zen_garden.core.postprocess.results.solution_loader import ComponentType
 from typing import Optional, Any
 import logging
 from tqdm import tqdm

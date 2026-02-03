@@ -1,6 +1,6 @@
 import argparse
 import sys
-from zen_garden.utils import download_example_dataset
+from zen_garden.core.utils import download_example_dataset
 
 def create_zen_example_cli():
     """ 

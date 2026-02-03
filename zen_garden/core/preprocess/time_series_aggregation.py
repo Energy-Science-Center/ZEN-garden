@@ -7,8 +7,8 @@ import pandas as pd
 import numpy as np
 import logging
 import tsam.timeseriesaggregation as tsam
-from zen_garden.model.energy_system import EnergySystem
-from zen_garden.model.element import Element
+from zen_garden.core.model.energy_system import EnergySystem
+from zen_garden.core.model.element import Element
 
 class TimeSeriesAggregation(object):
     """

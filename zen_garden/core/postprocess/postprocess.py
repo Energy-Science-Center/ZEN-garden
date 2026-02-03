@@ -18,7 +18,7 @@ from filelock import FileLock
 import yaml
 from pydantic import BaseModel
 
-from ..optimization_setup import OptimizationSetup
+from zen_garden.core.optimization_setup import OptimizationSetup
 
 
 # Warnings

@@ -4,15 +4,15 @@ This module contains the Results class, which is used to extract and process the
 import numpy as np
 from pandas import Series
 
-from zen_garden.postprocess.results.solution_loader import (
+from zen_garden.core.postprocess.results.solution_loader import (
     SolutionLoader,
     Scenario,
     Component,
     TimestepType,
     ComponentType,
 )
-from zen_garden.default_config import Config, Analysis, Solver, System
-from zen_garden.utils import reformat_slicing_index
+from zen_garden.core.default_config import Config, Analysis, Solver, System
+from zen_garden.core.utils import reformat_slicing_index
 import pandas as pd
 from typing import Optional, Any, Literal, Union
 import importlib

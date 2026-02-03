@@ -4,8 +4,8 @@ from pathlib import Path
 import pandas as pd
 import json
 import numpy as np
-from zen_garden.postprocess.results.results import Results
-from zen_garden.preprocess.unit_handling import UnitHandling
+from zen_garden.core.postprocess.results.results import Results
+from zen_garden.core.preprocess.unit_handling import UnitHandling
 
 
 def ensure_dir_exists(path: Path):
