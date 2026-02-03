@@ -42,7 +42,7 @@ class DocstringMethod(SphinxDirective):
 
     EXAMPLE
 
-    .. docstring_method:: zen_garden.model.objects.technology.conversion_technology.ConversionTechnologyRules.constraint_capacity_factor_conversion
+    .. docstring_method:: zen_garden.core.model.objects.technology.conversion_technology.ConversionTechnologyRules.constraint_capacity_factor_conversion
 
       
     """
@@ -133,7 +133,7 @@ class DocstringClass(SphinxDirective):
 
     EXAMPLE
 
-    .. docstring_class:: zen_garden.model.objects.technology.conversion_technology.ConversionTechnologyRules
+    .. docstring_class:: zen_garden.core.model.objects.technology.conversion_technology.ConversionTechnologyRules
 
       
     """

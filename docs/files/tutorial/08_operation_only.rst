@@ -118,8 +118,8 @@ The code below replicates the command line commands presented previously:
   import os 
 
   os.chdir("<data>")
-  zen_garden.run(dataset="<dataset>")
-  zen_garden.operation_scenarios(dataset="<dataset>", scenarios_op="scenarios_op.json")
+  zen_garden.core.run(dataset="<dataset>")
+  zen_garden.core.operation_scenarios(dataset="<dataset>", scenarios_op="scenarios_op.json")
 
 
 Results

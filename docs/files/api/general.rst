@@ -6,8 +6,8 @@ General
    :recursive:
 
     zen_garden.cli
-    zen_garden.runner
-    zen_garden.utils
+    zen_garden.core.runner
+    zen_garden.core.utils
 
 
 
