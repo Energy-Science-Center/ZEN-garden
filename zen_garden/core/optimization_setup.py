@@ -24,6 +24,7 @@ from zen_garden.core.preprocess.unit_handling import Scaling
 from zen_garden.core.preprocess.parameter_change_log import parameter_change_log
 
 from zen_garden.core.utils import ScenarioDict, IISConstraintParser, StringUtils
+from zen_garden.core.plugin_manager import PluginManager, Hook
 
 
 class OptimizationSetup(object):
@@ -43,6 +44,9 @@ class OptimizationSetup(object):
         :param scenario_dict: dictionary defining the scenario
         :param input_data_checks: input data checks object
         """
+        self.plugin_manager = PluginManager()
+        self.plugin_manager.register(config.plugins)
+
         self.analysis = copy.deepcopy(config.analysis)
         self.system = copy.deepcopy(config.system)
         self.solver = copy.deepcopy(config.solver)
@@ -415,6 +419,9 @@ class OptimizationSetup(object):
     def construct_optimization_problem(self):
         """ constructs the optimization problem """
         # create empty ConcreteModel
+        self.plugin_manager.emit(Hook.BEFORE_OPTIMIZATION_CONSTRUCTION,
+                                 optimization_setup=self)
+
         if self.solver.solver_dir is not None and not os.path.exists(self.solver.solver_dir):
             os.makedirs(self.solver.solver_dir)
         self.model = lp.Model(solver_dir=self.solver.solver_dir)
@@ -425,6 +432,10 @@ class OptimizationSetup(object):
         self.constraints = Constraint(self.sets,self.model)
         # define and construct components of self.model
         Element.construct_model_components(self)
+
+        self.plugin_manager.emit(Hook.AFTER_OPTIMIZATION_CONSTRUCTION,
+                                 optimization_setup=self,
+                                 model_instance=self.model)
         # Initiate scaling object
         self.scaling = Scaling(self.model, self.solver.scaling_algorithm, self.solver.scaling_include_rhs)
 
