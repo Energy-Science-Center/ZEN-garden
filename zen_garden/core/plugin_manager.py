@@ -1,6 +1,9 @@
 """
-This function runs ZEN garden,it is executed in the __main__.py script.
-Compilation  of the optimization problem.
+Plugin manager for ZEN-garden
+
+This module provides the :class:`PluginManager` which discovers, loads,
+and emits hooks to plugins, as well as the :class:`Hook` enum defining
+available extension points.
 """
 
 from importlib import import_module
